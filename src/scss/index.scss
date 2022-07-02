@@ -1,4 +1,5 @@
 @use './styles.scss';
+@use './nav.scss';
 @import './variables.scss';
 @import './buttons.scss';
 
@@ -6,23 +7,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     min-width: 320px;
 
-    h3 {
-        font-weight: $bold;
-        font-size: $sm-text;
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    h1 {
-        font-size: 3.8rem;
-    }
-
-    p {
-        font-weight: $medium;
-        margin-bottom: 24px;
-        font-size: $sm-text;
+    .grid-1 {
+        text-align: center;
+        h3 {
+            font-weight: $bold;
+            font-size: $sm-text;
+        }
+    
+        h1 {
+            font-size: 3.8rem;
+        }
+    
+        p {
+            font-weight: $medium;
+            margin-bottom: 24px;
+            font-size: $sm-text;
+        }
     }
 
     figure {
@@ -36,16 +46,21 @@
         }
     }
 
-    .prueba {
-        margin-top: 20px;
-        margin-bottom: 10px
-    }
-
-    button {
-        @include button();
-
-        a {
-            @include button__link();
+    .grid-3 {
+        .prueba {
+            font-weight: $medium;
+            margin-bottom: 24px;
+            font-size: $sm-text;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    
+        button {
+            @include button();
+    
+            a {
+                @include button__link();
+            }
         }
     }
 }

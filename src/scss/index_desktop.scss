@@ -1,0 +1,45 @@
+@use './nav_desktop.scss';
+@import './variables.scss';
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    min-height: 90vh;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .grid-1 {
+        padding-left: 150px;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        h3 {
+            font-size: $h2;
+        }
+
+        h1 {
+            font-size: 7.8rem;
+        }
+    }
+
+    figure {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+
+        img {
+            width: 390px;
+        }
+    }
+
+    .grid-3 {
+        padding-left: 150px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
