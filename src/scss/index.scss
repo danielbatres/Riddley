@@ -1,0 +1,51 @@
+@use './styles.scss';
+@import './variables.scss';
+@import './buttons.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 320px;
+
+    h3 {
+        font-weight: $bold;
+        font-size: $sm-text;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    p {
+        font-weight: $medium;
+        margin-bottom: 24px;
+        font-size: $sm-text;
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 250px;
+            object-fit: contain;
+        }
+    }
+
+    .prueba {
+        margin-top: 20px;
+        margin-bottom: 10px
+    }
+
+    button {
+        @include button();
+
+        a {
+            @include button__link();
+        }
+    }
+}

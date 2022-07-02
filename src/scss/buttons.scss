@@ -1,0 +1,19 @@
+@mixin button() {
+    background-color: #FD367E;
+    border: 1px solid #FD367E;
+    border-radius: 15px;
+    box-shadow: 0 12px 15px 0 #f0c3dc;
+}
+
+@mixin button__link() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 20px 0;
+    color: #FFFFFF;
+    text-decoration: none;
+}
