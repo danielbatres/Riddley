@@ -1,0 +1,136 @@
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav__logo h2 a {
+  font-size: 2.2rem;
+  color: #3E4377;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: 0.3s ease-in-out;
+}
+nav .nav__logo h2 a:hover {
+  color: #6068b8;
+}
+nav .bars {
+  font-size: 2.5rem;
+  color: #3E4377;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav__menu-right {
+  position: fixed;
+  width: 100%;
+  top: 10vh;
+  background-color: #EDEEF8;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+.nav__menu-right li {
+  display: none;
+  line-height: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #3E4377;
+}
+.nav__menu-right li a {
+  color: #3E4377;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  margin-left: 25px;
+}
+.nav__menu-right li a.active, .nav__menu-right li a:hover {
+  color: #6068b8;
+}
+.nav__menu-right li:last-child {
+  border-bottom: 1px solid #3E4377;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav__menu-right li {
+  display: block;
+}
+
+nav .nav__logo {
+  margin-left: 50px;
+}
+nav .bars {
+  display: none;
+}
+nav .nav__menu-right {
+  position: static;
+  height: 10vh;
+  top: 0;
+  background: none;
+  transition: none;
+  text-align: right;
+  margin-right: 50px;
+}
+nav .nav__menu-right li {
+  display: inline-block;
+  margin-left: 20px;
+  transition: none;
+  border: none;
+}
+nav .nav__menu-right li a {
+  font-size: 1.6rem;
+}
+nav .nav__menu-right li:last-child {
+  margin-right: 20px;
+  border: none;
+}
+
+header nav {
+  display: flex;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.riddley-container {
+  display: none;
+}
+
+.secciones {
+  flex-direction: row;
+  gap: 20px;
+}
+.secciones article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.secciones article .sc-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.secciones article .sc-title h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.secciones article .sc-link {
+  padding: 20px 0 40px;
+}
+
+.navegacion {
+  display: none;
+}
+
+/*# sourceMappingURL=home_desktop.css.map */

@@ -1,6 +1,10 @@
 @use './nav_desktop.scss';
 @import './variables.scss';
 
+header {
+    display: flex;
+}
+
 main {
     display: flex;
     justify-content: center;

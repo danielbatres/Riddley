@@ -1,0 +1,54 @@
+@use './nav.scss';
+@use './nav_desktop.scss';
+@import './variables.scss';
+
+header {
+    nav {
+        display: flex;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.riddley-container {
+    display: none;
+}
+
+.secciones {
+    flex-direction: row;
+    gap: 20px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .sc-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+
+            h3 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        .sc-link {
+            padding: 20px 0 40px;
+        }
+    }
+}
+
+.navegacion {
+    display: none;
+}
