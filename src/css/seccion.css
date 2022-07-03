@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  color: #3E4377;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EDEEF8;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav__logo h2 a {
+  font-size: 2.2rem;
+  color: #3E4377;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: 0.3s ease-in-out;
+}
+nav .nav__logo h2 a:hover {
+  color: #6068b8;
+}
+nav .bars {
+  font-size: 2.5rem;
+  color: #3E4377;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav__menu-right {
+  position: fixed;
+  width: 100%;
+  top: 10vh;
+  background-color: #EDEEF8;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  z-index: 999;
+}
+.nav__menu-right li {
+  display: none;
+  line-height: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #3E4377;
+}
+.nav__menu-right li a {
+  color: #3E4377;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  margin-left: 25px;
+}
+.nav__menu-right li a.active, .nav__menu-right li a:hover {
+  color: #6068b8;
+}
+.nav__menu-right li:last-child {
+  border-bottom: 1px solid #3E4377;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav__menu-right li {
+  display: block;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.lds-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #EDEEF8;
+  z-index: 1001;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #3E4377;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.contador {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 1000;
+}
+.contador h5 {
+  font-size: 6rem;
+  padding-bottom: 10px;
+  color: #FD367E;
+}
+.contador h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+  min-width: 320px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .opciones {
+  width: 90%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+main .opciones button {
+  min-width: 288px;
+  border-radius: 20px;
+  border: none;
+}
+main .opciones button:hover {
+  opacity: 0.8;
+}
+main .opciones button:nth-child(1) {
+  background-color: #6068b8;
+}
+main .opciones button:nth-child(2) {
+  background-color: #FD367E;
+}
+main .opciones button:nth-child(3) {
+  background-color: #F6E28D;
+}
+main .opciones button:nth-child(4) {
+  background-color: #3E4377;
+}
+main .progreso {
+  width: 100%;
+  min-width: 320px;
+}
+main .progreso div {
+  background-color: #6068b8;
+  margin: 100px;
+  padding: 5px 0;
+}
+main .resultado {
+  width: 90%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .resultado div {
+  text-align: center;
+  width: 50%;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 20px;
+}
+main .resultado div p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #BDBDBD;
+}
+
+/*# sourceMappingURL=seccion.css.map */

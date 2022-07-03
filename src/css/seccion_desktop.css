@@ -1,0 +1,34 @@
+nav .nav__logo {
+  margin-left: 50px;
+}
+nav .bars {
+  display: none;
+}
+nav .nav__menu-right {
+  position: static;
+  height: 10vh;
+  top: 0;
+  background: none;
+  transition: none;
+  text-align: right;
+  margin-right: 50px;
+}
+nav .nav__menu-right li {
+  display: inline-block;
+  margin-left: 20px;
+  transition: none;
+  border: none;
+}
+nav .nav__menu-right li a {
+  font-size: 1.6rem;
+}
+nav .nav__menu-right li:last-child {
+  margin-right: 20px;
+  border: none;
+}
+
+main .opciones {
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=seccion_desktop.css.map */

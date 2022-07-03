@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/seccion.css">
+    <link rel="stylesheet" href="../css/seccion_desktop.css" media="(min-width: 930px)">
+    <script src="https://kit.fontawesome.com/80e6682b87.js" crossorigin="anonymous"></script>
     <title>Riddley | Literatura Salvadoreña</title>
 </head>
-<body>
+<body class="hidden">
+    <div class="lds-container" id="lds">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="contador" id="contador">
+        <h5 id="contadorNum"></h5>
+        <h4>
+            Preparate
+        </h4>
+    </div>
     <header>
         <nav>
             <div class="nav__logo">
@@ -40,12 +60,6 @@
         </nav>
     </header>
     <main>
-        <section class="contador">
-            <h5></h5>
-            <h4>
-                Preparate
-            </h4>
-        </section>
         <section class="enunciado">
             <h4></h4>
         </section>
@@ -59,8 +73,16 @@
             <div></div>
         </section>
         <section class="resultado">
-            <div></div>
-            <div></div>
+            <div>
+                <p>
+                    Correcto
+                </p>
+            </div>
+            <div>
+                <p>
+                    Incorrecto
+                </p>
+            </div>
         </section>
         <section class="final">
             <div></div>
@@ -70,5 +92,9 @@
             </div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/preloader.js"></script>
+    <script src="../js/counter.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

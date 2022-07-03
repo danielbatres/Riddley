@@ -1,0 +1,12 @@
+@use './nav_desktop.scss';
+@import './variables.scss';
+
+main {
+    .opciones {
+        flex-direction: row;
+
+        button {
+            width: 25%;
+        }
+    }
+}
