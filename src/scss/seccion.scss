@@ -40,6 +40,7 @@ main {
         width: 90%;
         min-width: 320px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -47,7 +48,8 @@ main {
         margin: 30px 0;
 
         button {
-            min-width: 288px;
+            min-width: 300px;
+            padding: 60px 0;
             border-radius: 20px;
             border: none;
         }
@@ -74,13 +76,20 @@ main {
     }
 
     .progreso {
-        width: 100%;
+        width: 90%;
         min-width: 320px;
 
-        div {
+        .bar-container {
             background-color: $soft-purple;
-            margin: 100px;
-            padding: 5px 0;
+            border-radius: 20px;
+
+            div {
+                width: 1%;
+                background-color: $pink;
+                margin: 100px 0;
+                padding: 5px 0;
+                border-radius: 20px;
+            }
         }
     }
 

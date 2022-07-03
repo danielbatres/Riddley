@@ -61,24 +61,28 @@
     </header>
     <main>
         <section class="enunciado">
-            <h4></h4>
+            <h4 id="enunciado"></h4>
         </section>
         <section class="opciones">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button class="button" type="button">
+                <p class="buttonValue" id="left"></p>
+            </button>
+            <button class="button" type="button">
+                <p class="buttonValue" id="right"></p>
+            </button>
         </section>
         <section class="progreso">
-            <div></div>
+            <div class="bar-container">
+                <div id="bar"></div>
+            </div>
         </section>
         <section class="resultado">
-            <div>
+            <div id="correcto">
                 <p>
                     Correcto
                 </p>
             </div>
-            <div>
+            <div id="incorrecto">
                 <p>
                     Incorrecto
                 </p>
@@ -95,6 +99,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/preloader.js"></script>
     <script src="../js/counter.js"></script>
+    <script src="../js/Pregunta.js"></script>
+    <script src="../js/litPreguntas.js"></script>
     <script src="../js/index.js"></script>
 </body>
 </html>

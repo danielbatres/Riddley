@@ -188,6 +188,7 @@ main .opciones {
   width: 90%;
   min-width: 320px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -195,7 +196,8 @@ main .opciones {
   margin: 30px 0;
 }
 main .opciones button {
-  min-width: 288px;
+  min-width: 300px;
+  padding: 60px 0;
   border-radius: 20px;
   border: none;
 }
@@ -215,13 +217,19 @@ main .opciones button:nth-child(4) {
   background-color: #3E4377;
 }
 main .progreso {
-  width: 100%;
+  width: 90%;
   min-width: 320px;
 }
-main .progreso div {
+main .progreso .bar-container {
   background-color: #6068b8;
-  margin: 100px;
+  border-radius: 20px;
+}
+main .progreso .bar-container div {
+  width: 1%;
+  background-color: #FD367E;
+  margin: 100px 0;
   padding: 5px 0;
+  border-radius: 20px;
 }
 main .resultado {
   width: 90%;
