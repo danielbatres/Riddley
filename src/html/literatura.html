@@ -31,7 +31,7 @@
         <nav>
             <div class="nav__logo">
                 <h2>
-                    <a href="./index.html">
+                    <a href="../../index.html">
                         Riddley
                     </a>
                 </h2>
@@ -59,16 +59,16 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="display">
         <section class="enunciado">
             <h4 id="enunciado"></h4>
         </section>
         <section class="opciones">
-            <button class="button" type="button">
-                <p class="buttonValue" id="left"></p>
+            <button type="button">
+                <p id="left"></p>
             </button>
-            <button class="button" type="button">
-                <p class="buttonValue" id="right"></p>
+            <button type="button">
+                <p id="right"></p>
             </button>
         </section>
         <section class="progreso">
@@ -88,16 +88,24 @@
                 </p>
             </div>
         </section>
-        <section class="final">
-            <div></div>
-            <div>
-                <button></button>
-                <button></button>
-            </div>
-        </section>
     </main>
+    <div id="siguiente" class="siguiente display">
+        <h4>
+            Siguiente Pregunta
+        </h4>
+        <h5 id="contadorSiguiente"></h5>
+        <p>
+            Tu puntuación actual es: <b id="puntuacion"></b>
+        </p>
+    </div>
+    <div class="final hidden">
+        <div></div>
+        <div>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/preloader.js"></script>
     <script src="../js/counter.js"></script>
     <script src="../js/Pregunta.js"></script>
     <script src="../js/litPreguntas.js"></script>

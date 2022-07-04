@@ -1,28 +1,28 @@
 const counter = document.getElementById("contadorNum");
 
+window.onload = () => {
+    $('#lds').fadeOut(500);
+    setTimeout(() => {
+        $('body').removeClass('hidden');
+    }, 5000);
+}
+
 const funcionContador = () => {
-    setTimeout(() => {
-        counter.innerHTML = 5;
-    }, 0)
-    
-    setTimeout(() => {
-        counter.innerHTML = 4;
-    }, 1000);
-    
-    setTimeout(() => {
-        counter.innerHTML = 3;
-    }, 2000);
-    
-    setTimeout(() => {
-        counter.innerHTML = 2;
-    }, 3000);
-    
-    setTimeout(() => {
-        counter.innerHTML = 1;
-    }, 4000);
+    const timer = (counter, value, time) => {
+        setTimeout(() => {
+            counter.innerHTML = value;
+        }, time);
+    };
+
+    timer(counter, 5, 0);
+    timer(counter, 4, 1000);
+    timer(counter, 3, 2000);
+    timer(counter, 2, 3000);
+    timer(counter, 1, 4000);
     
     setTimeout(() => {
         $('#contador').fadeOut();
+        $('main').removeClass("display")
     }, 5000);
 }
 

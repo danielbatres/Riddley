@@ -154,6 +154,10 @@ nav .bars {
     transform: translate(24px, 0);
   }
 }
+.display {
+  display: none !important;
+}
+
 .contador {
   position: absolute;
   display: flex;
@@ -184,6 +188,18 @@ main {
   justify-content: center;
   align-items: center;
 }
+main .hidden-main {
+  overflow: hidden;
+}
+main .enunciado {
+  width: 90%;
+  min-width: 310px;
+}
+main .enunciado h4 {
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
 main .opciones {
   width: 90%;
   min-width: 320px;
@@ -196,10 +212,13 @@ main .opciones {
   margin: 30px 0;
 }
 main .opciones button {
-  min-width: 300px;
+  min-width: 100%;
   padding: 60px 0;
   border-radius: 20px;
   border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 main .opciones button:hover {
   opacity: 0.8;
@@ -250,6 +269,37 @@ main .resultado div p {
   font-size: 1.4rem;
   font-weight: 700;
   color: #BDBDBD;
+}
+
+.siguiente {
+  position: absolute;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1005;
+}
+.siguiente h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.siguiente h5 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FD367E;
+}
+.siguiente p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.siguiente p b {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=seccion.css.map */
