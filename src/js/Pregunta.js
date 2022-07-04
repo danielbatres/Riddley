@@ -1,6 +1,5 @@
 class Pregunta {
-    constructor(tema, enunciado, opcionCorrecta, opcionIncorrecta) {
-        this.tema = tema;
+    constructor(enunciado, opcionCorrecta, opcionIncorrecta) {
         this.enunciado = enunciado;
         this.opcionCorrecta = opcionCorrecta;
         this.opcionIncorrecta = opcionIncorrecta;

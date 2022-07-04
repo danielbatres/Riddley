@@ -54,26 +54,43 @@ const imprimirPregunta = (pregunta) => {
     buttonRight.innerHTML = valor[1];
 }
 
+// const conocerButton = () => {
+//     const botones = [buttonLeft, buttonRight];
+
+//     botones.forEach(button => {
+//         button.addEventListener("click", () => {
+//             return new Promise((resolve, reject) => {
+//                 resolve(() => {
+//                     if (button == buttonLeft) {
+//                         return buttonLeft;
+//                     } else {
+//                         return buttonRight;
+//                     }
+//                 });
+//                 reject(console.log("Algo salio mal"));
+//             });
+//         });
+//     });
+// }
+
 const validarPregunta = (pregunta) => {
-    const buttonLeftValue = buttonLeft.innerHTML;
-    const buttonRightValue = buttonRight.innerHTML;
-
-    const evento = (btn, btnValue,) => {
-        btn.addEventListener("click", (e) => {
-
-            if (btnValue.toString() == pregunta.opcionCorrecta) {
+    const evento = (btn, btnValue) => {
+        btn.addEventListener("click", () => {
+            if (btnValue == pregunta.opcionCorrecta) {
                 correcto.style.backgroundColor = "#C0F2BC";
                 puntos(2);
+                console.log("estuvo correcta");
             } else {
                 incorrecto.style.backgroundColor = "#F2BCBC";
+                console.log("Estuvo incorrecta");
             }
 
-            e.stopPropagation();
+            $("#bloqueo").removeClass("display");
         });
     };
 
-    evento(buttonLeft, buttonLeftValue);
-    evento(buttonRight, buttonRightValue);
+    evento(buttonLeft, buttonLeft.innerHTML.toString());
+    evento(buttonRight, buttonRight.innerHTML.toString());
 }
 
 const perguntasAleatorias = (array) => {
@@ -113,23 +130,45 @@ const siguienteContador = () => {
 const testCompleto = () => {
     setTimeout(() => {
         imprimirPregunta(preguntasLiteraturaArray[0]);
-        validarPregunta(preguntasLiteraturaArray[0]);
+        let ejec = validarPregunta;
+        ejec(preguntasLiteraturaArray[0], buttonLeft || buttonRight)
+        ejec = null;
         move();
+
+        const ejecucion = (num, time) => {
+            setTimeout(() => {
+                elem.style.width = "1%";
+                correcto.style.backgroundColor = "#FFFFFF";
+                incorrecto.style.backgroundColor = "#FFFFFF";
+                $("#bloqueo").addClass("display");
+                move();
+                imprimirPregunta(preguntasLiteraturaArray[num]);
+                let ejec = validarPregunta;
+                ejec(perguntasAleatorias[num], buttonLeft || buttonRight);
+                ejec = null;
+            }, time);
+        }
+
+        ejecucion(1, 10000);
+        ejecucion(2, 22000);
+        ejecucion(3, 34000);
+        ejecucion(4, 46000);
     
-        setTimeout(() => {
-            for (let i = 0; i <= 4; i++) {
-                (function proceso(num) {
-                    setTimeout(() => {
-                        elem.style.width = "1%";
-                        correcto.style.backgroundColor = "#FFFFFF";
-                        incorrecto.style.backgroundColor = "#FFFFFF";
-                        move();
-                        imprimirPregunta(preguntasLiteraturaArray[num]);
-                        validarPregunta(preguntasLiteraturaArray[num]);
-                    }, 10000 * num - 10000);
-                })(i);
-            }
-        }, 10000);
+        // setTimeout(() => {
+        //     for (let i = 0; i <= 4; i++) {
+        //         (function proceso(num) {
+        //             setTimeout(() => {
+        //                 elem.style.width = "1%";
+        //                 correcto.style.backgroundColor = "#FFFFFF";
+        //                 incorrecto.style.backgroundColor = "#FFFFFF";
+        //                 $("#bloqueo").addClass("display");
+        //                 move();
+        //                 imprimirPregunta(preguntasLiteraturaArray[num]);
+        //                 validarPregunta(preguntasLiteraturaArray[num]);
+        //             }, 10000 * num - 10000);
+        //         })(i);
+        //     }
+        // }, 10000);
     }, 5000);
 }
 
