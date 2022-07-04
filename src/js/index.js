@@ -9,7 +9,7 @@ let puntuacion = 0;
 
 const move = () => {
     let width = 1;
-    let id = setInterval(frame, 100);
+    let id = setInterval(frame, 80);
     function frame() {
         if (width >= 100) {
             clearInterval(id);
@@ -19,7 +19,7 @@ const move = () => {
         }
 
         if (width == 100) {
-            siguienteContador();
+            $("#botonSiguiente").removeClass("display");
         }
     }
 }
@@ -50,30 +50,10 @@ const imprimirPregunta = (pregunta) => {
 
     const valor = valorRandom();
 
-    buttonLeft.innerHTML = valor[0];
-    buttonRight.innerHTML = valor[1];
+    return buttonLeft.innerHTML = valor[0], buttonRight.innerHTML = valor[1];
 }
 
-// const conocerButton = () => {
-//     const botones = [buttonLeft, buttonRight];
-
-//     botones.forEach(button => {
-//         button.addEventListener("click", () => {
-//             return new Promise((resolve, reject) => {
-//                 resolve(() => {
-//                     if (button == buttonLeft) {
-//                         return buttonLeft;
-//                     } else {
-//                         return buttonRight;
-//                     }
-//                 });
-//                 reject(console.log("Algo salio mal"));
-//             });
-//         });
-//     });
-// }
-
-const validarPregunta = (pregunta) => {
+function validarPregunta(pregunta) {
     const evento = (btn, btnValue) => {
         btn.addEventListener("click", () => {
             if (btnValue == pregunta.opcionCorrecta) {
@@ -127,32 +107,46 @@ const siguienteContador = () => {
     }, 3000);
 };
 
+const botonSiguiente = () => {
+    const butSig = document.getElementById("botonSiguiente");
+
+    butSig.addEventListener("click", () => {
+        siguienteContador();
+        $("#botonSiguiente").addClass("display");
+    });
+};
+
+// const ejecucion = (num) => {
+//     elem.style.width = "1%";
+//     correcto.style.backgroundColor = "#FFFFFF";
+//     correcto.style.backgroundColor = "#FFFFFF";
+//     $("#bloqueo").addClass("display");
+//     move();
+//     imprimirPregunta(preguntasLiteraturaArray[num]);
+//     let ejec = validarPregunta;
+//     ejec(perguntasAleatorias[num], buttonLeft || buttonRight);
+// }
+
 const testCompleto = () => {
     setTimeout(() => {
         imprimirPregunta(preguntasLiteraturaArray[0]);
         let ejec = validarPregunta;
-        ejec(preguntasLiteraturaArray[0], buttonLeft || buttonRight)
-        ejec = null;
+        ejec(preguntasLiteraturaArray[0], buttonLeft || buttonRight);
         move();
+        botonSiguiente();
 
-        const ejecucion = (num, time) => {
-            setTimeout(() => {
-                elem.style.width = "1%";
-                correcto.style.backgroundColor = "#FFFFFF";
-                incorrecto.style.backgroundColor = "#FFFFFF";
-                $("#bloqueo").addClass("display");
-                move();
-                imprimirPregunta(preguntasLiteraturaArray[num]);
-                let ejec = validarPregunta;
-                ejec(perguntasAleatorias[num], buttonLeft || buttonRight);
-                ejec = null;
-            }, time);
-        }
-
-        ejecucion(1, 10000);
-        ejecucion(2, 22000);
-        ejecucion(3, 34000);
-        ejecucion(4, 46000);
+        // const ejecucion = (num, time) => {
+        //     setTimeout(() => {
+        //         elem.style.width = "1%";
+        //         correcto.style.backgroundColor = "#FFFFFF";
+        //         incorrecto.style.backgroundColor = "#FFFFFF";
+        //         $("#bloqueo").addClass("display");
+        //         move();
+        //         imprimirPregunta(preguntasLiteraturaArray[num]);
+        //         let ejec = validarPregunta;
+        //         ejec(perguntasAleatorias[num], buttonLeft || buttonRight);
+        //     }, time);
+        // }
     
         // setTimeout(() => {
         //     for (let i = 0; i <= 4; i++) {

@@ -246,7 +246,7 @@ main .progreso .bar-container {
 main .progreso .bar-container div {
   width: 1%;
   background-color: #FD367E;
-  margin: 100px 0;
+  margin: 50px 0;
   padding: 5px 0;
   border-radius: 20px;
 }
@@ -271,12 +271,32 @@ main .resultado div p {
   color: #BDBDBD;
 }
 
+.boton-siguiente-container {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-siguiente-container .boton-siguiente {
+  width: 90%;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  color: #BDBDBD;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: none;
+}
+
 #bloqueo {
   position: absolute;
-  background-color: rgba(249, 182, 57, 0.4784313725);
-  min-height: 100vh;
-  width: 100%;
+  background-color: transparent;
+  height: 50vh;
+  width: 90%;
   z-index: 1010;
+  border-radius: 20px;
 }
 
 .siguiente {

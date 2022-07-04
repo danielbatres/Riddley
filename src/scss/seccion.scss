@@ -108,7 +108,7 @@ main {
             div {
                 width: 1%;
                 background-color: $pink;
-                margin: 100px 0;
+                margin: 50px 0;
                 padding: 5px 0;
                 border-radius: 20px;
             }
@@ -139,12 +139,33 @@ main {
     }
 }
 
+.boton-siguiente-container {
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .boton-siguiente {
+        width: 90%;
+        padding: 30px;
+        margin: 20px 0;
+        border-radius: 20px;
+        background-color: $light-gray;
+        color: $gray;
+        font-size: $sm-text;
+        font-weight: $bold;
+        border: none;
+    }
+}
+
 #bloqueo {
     position: absolute;
-    background-color: #f9b6397a;
-    min-height: 100vh;
-    width: 100%;
+    background-color: transparent;
+    height: 50vh;
+    width: 90%;
     z-index: 1010;
+    border-radius: 20px;
 }
 
 .siguiente {
