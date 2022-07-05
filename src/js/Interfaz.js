@@ -1,3 +1,5 @@
+import { preguntasLiteratura } from "./litPreguntas.js";
+
 export class Interfaz {
     constructor() {
         this.enunciado = document.getElementById("enunciado");
@@ -5,7 +7,6 @@ export class Interfaz {
         this.buttonRight = document.getElementById("right");
         this.correcto = document.getElementById("correcto");
         this.incorrecto = document.getElementById("incorrecto");
-        this.elem = document.getElementById("bar");
         this.puntuacionId = document.getElementById("puntuacion");
         this.puntuacion = 0;
         this.preguntasLiteraturaArray = this.preguntasRandom();
@@ -14,16 +15,13 @@ export class Interfaz {
     move() {
         let width = 1;
         let id = setInterval(frame, 80);
+        const elem = document.getElementById("bar");
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
             } else {
                 width++;
-                this.elem.style.width = `${width}%`;
-            }
-    
-            if (width == 100) {
-                $("#botonSiguiente").removeClass("display");
+                elem.style.width = `${width}%`;
             }
         }
     }
@@ -33,7 +31,7 @@ export class Interfaz {
             this.puntuacion += puntuacionNueva;
         }
     
-        return this.puntuacionId.innerHTML = puntuacion;
+        return this.puntuacionId.innerHTML = this.puntuacion;
     }
 
     imprimirPregunta(pregunta) {
@@ -54,15 +52,15 @@ export class Interfaz {
     
         const valor = valorRandom();
     
-        return buttonLeft.innerHTML = valor[0], buttonRight.innerHTML = valor[1];
+        return this.buttonLeft.innerHTML = valor[0], this.buttonRight.innerHTML = valor[1];
     }
 
-    validarPregunta() {
+    validarPregunta(pregunta) {
         const evento = (btn, btnValue) => {
             btn.addEventListener("click", () => {
                 if (btnValue == pregunta.opcionCorrecta) {
                     this.correcto.style.backgroundColor = "#C0F2BC";
-                    puntos(2);
+                    this.puntos(2);
                     console.log("estuvo correcta");
                 } else {
                     this.incorrecto.style.backgroundColor = "#F2BCBC";
@@ -73,8 +71,8 @@ export class Interfaz {
             });
         };
     
-        evento(buttonLeft, buttonLeft.innerHTML.toString());
-        evento(buttonRight, buttonRight.innerHTML.toString());
+        evento(this.buttonLeft, this.buttonLeft.innerHTML.toString());
+        evento(this.buttonRight, this.buttonRight.innerHTML.toString());
     }
 
     preguntaAleatorias(array) {
