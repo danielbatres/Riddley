@@ -1,11 +1,4 @@
-const enunciado = document.getElementById("enunciado");
-const buttonLeft = document.getElementById("left");
-const buttonRight = document.getElementById("right");
-const correcto = document.getElementById("correcto");
-const incorrecto = document.getElementById("incorrecto");
-const elem = document.getElementById("bar");
-let puntuacionId = document.getElementById("puntuacion");
-let puntuacion = 0;
+import { Interfaz } from "./Interfaz";
 
 // const move = () => {
 //     let width = 1;
@@ -107,14 +100,14 @@ let puntuacion = 0;
 //     }, 3000);
 // };
 
-const botonSiguiente = () => {
-    const butSig = document.getElementById("botonSiguiente");
+// const botonSiguiente = () => {
+//     const butSig = document.getElementById("botonSiguiente");
 
-    butSig.addEventListener("click", () => {
-        siguienteContador();
-        $("#botonSiguiente").addClass("display");
-    });
-};
+//     butSig.addEventListener("click", () => {
+//         siguienteContador();
+//         $("#botonSiguiente").addClass("display");
+//     });
+// };
 
 // const ejecucion = (num) => {
 //     elem.style.width = "1%";

@@ -1,5 +1,15 @@
 export class Interfaz {
-    constructor() {}
+    constructor() {
+        this.enunciado = document.getElementById("enunciado");
+        this.buttonLeft = document.getElementById("left");
+        this.buttonRight = document.getElementById("right");
+        this.correcto = document.getElementById("correcto");
+        this.incorrecto = document.getElementById("incorrecto");
+        this.elem = document.getElementById("bar");
+        this.puntuacionId = document.getElementById("puntuacion");
+        this.puntuacion = 0;
+        this.preguntasLiteraturaArray = this.preguntasRandom();
+    }
 
     move() {
         let width = 1;
@@ -9,7 +19,7 @@ export class Interfaz {
                 clearInterval(id);
             } else {
                 width++;
-                elem.style.width = `${width}%`;
+                this.elem.style.width = `${width}%`;
             }
     
             if (width == 100) {
@@ -19,15 +29,15 @@ export class Interfaz {
     }
 
     puntos(puntuacionNueva) {
-        if (puntuacion != 10) {
-            puntuacion += puntuacionNueva;
+        if (this.puntuacion != 10) {
+            this.puntuacion += puntuacionNueva;
         }
     
-        return puntuacionId.innerHTML = puntuacion;
+        return this.puntuacionId.innerHTML = puntuacion;
     }
 
     imprimirPregunta(pregunta) {
-        enunciado.innerHTML = pregunta.enunciado;
+        this.enunciado.innerHTML = pregunta.enunciado;
 
         const valorRandom = () => {
             const arrayAleatorio = (array) => {
@@ -51,11 +61,11 @@ export class Interfaz {
         const evento = (btn, btnValue) => {
             btn.addEventListener("click", () => {
                 if (btnValue == pregunta.opcionCorrecta) {
-                    correcto.style.backgroundColor = "#C0F2BC";
+                    this.correcto.style.backgroundColor = "#C0F2BC";
                     puntos(2);
                     console.log("estuvo correcta");
                 } else {
-                    incorrecto.style.backgroundColor = "#F2BCBC";
+                    this.incorrecto.style.backgroundColor = "#F2BCBC";
                     console.log("Estuvo incorrecta");
                 }
     
@@ -80,7 +90,7 @@ export class Interfaz {
         $("#siguiente").removeClass("display");
 
         const contador = document.getElementById("contadorSiguiente");
-        puntuacionId.innerHTML = puntuacion;
+        this.puntuacionId.innerHTML = puntuacion;
 
         const timer = (counter, value, time) => {
             setTimeout(() => {
