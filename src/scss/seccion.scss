@@ -97,6 +97,16 @@ main {
         }
     }
 
+    .opciones-d {
+        button:nth-child(1) {
+            background-color: $yellow;
+        }
+
+        button:nth-child(2) {
+            background-color: $purple;
+        }
+    }
+
     .progreso {
         width: 90%;
         min-width: 320px;
@@ -177,7 +187,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1005;
+    z-index: 10000;
     
 
     h4 {

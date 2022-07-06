@@ -1,21 +1,19 @@
-import { preguntasLiteratura } from "./litPreguntas.js";
+let puntuacion = 0;
 
 export class Interfaz {
-    constructor() {
-        this.enunciado = document.getElementById("enunciado");
-        this.buttonLeft = document.getElementById("left");
-        this.buttonRight = document.getElementById("right");
-        this.correcto = document.getElementById("correcto");
-        this.incorrecto = document.getElementById("incorrecto");
+    constructor(enunciado, left, right, correcto, incorrecto) {
+        this.enunciado = document.getElementById(enunciado);
+        this.buttonLeft = document.getElementById(left);
+        this.buttonRight = document.getElementById(right);
+        this.correcto = document.getElementById(correcto);
+        this.incorrecto = document.getElementById(incorrecto);
         this.puntuacionId = document.getElementById("puntuacion");
-        this.puntuacion = 0;
-        this.preguntasLiteraturaArray = this.preguntasRandom();
     }
 
-    move() {
+    move(bar) {
         let width = 1;
         let id = setInterval(frame, 80);
-        const elem = document.getElementById("bar");
+        const elem = document.getElementById(bar);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -27,11 +25,11 @@ export class Interfaz {
     }
 
     puntos(puntuacionNueva) {
-        if (this.puntuacion != 10) {
-            this.puntuacion += puntuacionNueva;
+        if (puntuacion != 10) {
+            puntuacion += puntuacionNueva;
         }
     
-        return this.puntuacionId.innerHTML = this.puntuacion;
+        return this.puntuacionId.innerHTML = puntuacion;
     }
 
     imprimirPregunta(pregunta) {
@@ -73,14 +71,6 @@ export class Interfaz {
     
         evento(this.buttonLeft, this.buttonLeft.innerHTML.toString());
         evento(this.buttonRight, this.buttonRight.innerHTML.toString());
-    }
-
-    preguntaAleatorias(array) {
-        return array.sort(() => Math.random() - 0.5);
-    }
-
-    preguntasRandom() {
-        return this.preguntaAleatorias(preguntasLiteratura);
     }
 
     siguienteContador() {
