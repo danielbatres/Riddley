@@ -213,3 +213,68 @@ main {
         }
     }
 }
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+
+    .resultado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            font-size: $h3;
+            font-weight: $bold;
+            color: $purple;
+            margin-bottom: 20px;
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 288px;
+            width: 288px;
+            min-width: 288px;
+            border-radius: 100%;
+            background-color: $purple;
+
+            p {
+                font-size: 8rem;
+                color: $pink;
+                font-weight: $bold;
+            }
+        }
+
+        #mensajeFinal {
+            font-size: $num;
+            color: $purple;
+            font-weight: $bold;
+            margin: 20px 0;
+        }
+    }
+
+    .button-final {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        button {
+            @include button();
+
+            span {
+                @include button__link();
+            }
+        }
+    }
+}

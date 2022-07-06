@@ -336,4 +336,73 @@ main .resultado div p {
   font-weight: 700;
 }
 
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 320px;
+}
+.final .resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.final .resultado h5 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3E4377;
+  margin-bottom: 20px;
+}
+.final .resultado .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 288px;
+  width: 288px;
+  min-width: 288px;
+  border-radius: 100%;
+  background-color: #3E4377;
+}
+.final .resultado .circle p {
+  font-size: 8rem;
+  color: #FD367E;
+  font-weight: 700;
+}
+.final .resultado #mensajeFinal {
+  font-size: 2.8rem;
+  color: #3E4377;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.final .button-final {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.final .button-final button {
+  background-color: #FD367E;
+  border: 1px solid #FD367E;
+  border-radius: 15px;
+  box-shadow: 0 12px 15px 0 #f0c3dc;
+}
+.final .button-final button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 20px 0;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=seccion.css.map */
