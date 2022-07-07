@@ -188,6 +188,13 @@ main {
   justify-content: center;
   align-items: center;
 }
+main .seccion-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 main .hidden-main {
   overflow: hidden;
 }
@@ -277,25 +284,6 @@ main .resultado div p {
   color: #BDBDBD;
 }
 
-.boton-siguiente-container {
-  width: 100%;
-  min-width: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.boton-siguiente-container .boton-siguiente {
-  width: 90%;
-  padding: 30px;
-  margin: 20px 0;
-  border-radius: 20px;
-  background-color: #F6F6F6;
-  color: #BDBDBD;
-  font-size: 1.4rem;
-  font-weight: 700;
-  border: none;
-}
-
 #bloqueo {
   position: absolute;
   background-color: transparent;
@@ -309,7 +297,7 @@ main .resultado div p {
   position: absolute;
   width: 100%;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -341,7 +329,7 @@ main .resultado div p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   min-width: 320px;
 }
@@ -368,7 +356,7 @@ main .resultado div p {
   background-color: #3E4377;
 }
 .final .resultado .circle p {
-  font-size: 8rem;
+  font-size: 7rem;
   color: #FD367E;
   font-weight: 700;
 }

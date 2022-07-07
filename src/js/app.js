@@ -5,6 +5,7 @@ import { cuartaSeccion } from "./elements.js";
 import { quintaSeccion } from "./elements.js";
 import { preguntasLiteratura } from "./litPreguntas.js";
 import { preguntasComic } from "./comicPreguntas.js";
+import { puntuacion } from "./Interfaz.js";
 
 const preguntaAleatorias = array => {
     return array.sort(() => Math.random() - 0.5);
@@ -53,7 +54,38 @@ const aplication = (preguntas) => {
         timer(segundaSeccion, preguntas, 1, 11000, segundo, "bar2");
         timer(terceraSeccion, preguntas, 2, 22000, tercero, "bar3");
         timer(cuartaSeccion, preguntas, 3, 33000, cuarto, "bar4");
-        timer(quintaSeccion, preguntas, 4, 44000, quinto, "bar5");
+
+        setTimeout(() => {
+            const elem = document.getElementById("bar5");
+            $(quinto).removeClass("display");
+
+            elem.style.width = "1%";
+            quintaSeccion.correcto.style.backgroundColor = "#FFFFFF";
+            quintaSeccion.incorrecto.style.backgroundColor = "#FFFFFF";
+            $("#bloqueo").addClass("display");
+            quintaSeccion.imprimirPregunta(preguntas[4]);
+            quintaSeccion.validarPregunta(preguntas[4], quintaSeccion.left || quintaSeccion.right);
+            quintaSeccion.move("bar5");
+
+            setTimeout(() => {
+                $(quinto).addClass("display");
+            }, 8000);
+        }, 44000)
+
+        setTimeout(() => {
+            $("main").addClass("display");
+            $("#bloqueo").addClass("display");
+            $("#final").removeClass("display");
+            const puntuacionFinal = document.getElementById("puntuacionFinal");
+            const mensajeFinal = document.getElementById("mensajeFinal");
+
+            puntuacionFinal.innerHTML = puntuacion;
+
+            puntuacion >= 7
+                ? mensajeFinal.innerHTML = "¡Felicitaciones!"
+                : mensajeFinal.innerHTML = "Suerte para la proxima";
+
+        }, 52000);
     }, 5000);
 };
 

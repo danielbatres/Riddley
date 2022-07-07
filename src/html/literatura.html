@@ -13,7 +13,7 @@
     <link rel="icon" href="https://i.ibb.co/42g3h6J/Bookshelf-perspective-matte.png">
     <title>Riddley | Literatura Salvadoreña</title>
 </head>
-<body class="hidden">
+<body class="hidden" id="literatura">
     <div class="lds-container" id="lds">
         <div class="lds-ellipsis">
             <div></div>
@@ -61,7 +61,7 @@
         </nav>
     </header>
     <main class="display">
-        <section id="primero" class="primer-pregunta-container">
+        <section id="primero" class="primer-pregunta-container seccion-container">
             <section class="enunciado">
                 <h4 id="enunciado"></h4>
             </section>
@@ -91,7 +91,7 @@
                 </div>
             </section>
         </section>
-        <section id="segundo" class="segunda-pregunta-container display">
+        <section id="segundo" class="segunda-pregunta-container seccion-container display">
             <section class="enunciado">
                 <h4 id="enunciado2"></h4>
             </section>
@@ -121,7 +121,7 @@
                 </div>
             </section>
         </section>
-        <section id="tercero" class="tercer-pregunta-container display">
+        <section id="tercero" class="tercer-pregunta-container seccion-container display">
             <section class="enunciado">
                 <h4 id="enunciado3"></h4>
             </section>
@@ -151,7 +151,7 @@
                 </div>
             </section>
         </section>
-        <section id="cuarto" class="cuarta-pregunta-container display">
+        <section id="cuarto" class="cuarta-pregunta-container seccion-container display">
             <section class="enunciado">
                 <h4 id="enunciado4"></h4>
             </section>
@@ -181,7 +181,7 @@
                 </div>
             </section>
         </section>
-        <section id="quinto" class="quinta-pregunta-container display">
+        <section id="quinto" class="quinta-pregunta-container seccion-container display">
             <section class="enunciado">
                 <h4 id="enunciado5"></h4>
             </section>
@@ -227,7 +227,7 @@
             Tu puntuación actual es: <b id="puntuacion"></b>
         </p>
     </div>
-    <div class="final hidden">
+    <div id="final" class="final display">
         <div class="resultado">
             <h5>
                 Tu resultado es:
@@ -240,12 +240,12 @@
             <h3 id="mensajeFinal"></h3>
         </div>
         <div class="button-final">
-            <button type="button">
+            <button type="button" onclick="location.reload();">
                 <span>
                     Intentar de nuevo
                 </span>
             </button>
-            <button type="button">
+            <button type="button" onclick="history.go(-1);">
                 <span>
                     Escoger otra sección
                 </span>

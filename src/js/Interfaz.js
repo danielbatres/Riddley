@@ -1,4 +1,4 @@
-let puntuacion = 0;
+export let puntuacion = 0;
 
 export class Interfaz {
     constructor(enunciado, left, right, correcto, incorrecto) {
@@ -59,10 +59,10 @@ export class Interfaz {
                 if (btnValue == pregunta.opcionCorrecta) {
                     this.correcto.style.backgroundColor = "#C0F2BC";
                     this.puntos(2);
-                    console.log("estuvo correcta");
+                    console.log("Correcta");
                 } else {
                     this.incorrecto.style.backgroundColor = "#F2BCBC";
-                    console.log("Estuvo incorrecta");
+                    console.log("Incorrecta");
                 }
     
                 $("#bloqueo").removeClass("display");
