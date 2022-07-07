@@ -148,12 +148,9 @@ main {
             background-color: $light-gray;
             border-radius: 20px;
             padding: 20px;
-
-            p {
-                font-size: $sm-text;
-                font-weight: $bold;
-                color: $gray;
-            }
+            font-size: $sm-text;
+            font-weight: $bold;
+            color: $gray;
         }
     }
 }

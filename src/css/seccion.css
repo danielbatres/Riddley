@@ -278,8 +278,6 @@ main .resultado div {
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 20px;
-}
-main .resultado div p {
   font-size: 1.4rem;
   font-weight: 700;
   color: #BDBDBD;

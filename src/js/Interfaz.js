@@ -58,10 +58,12 @@ export class Interfaz {
             btn.addEventListener("click", () => {
                 if (btnValue == pregunta.opcionCorrecta) {
                     this.correcto.style.backgroundColor = "#C0F2BC";
+                    this.correcto.style.color = "#87AD84";
                     this.puntos(2);
                     console.log("Correcta");
                 } else {
                     this.incorrecto.style.backgroundColor = "#F2BCBC";
+                    this.incorrecto.style.color = "#AD8484";
                     console.log("Incorrecta");
                 }
     
