@@ -1,0 +1,23 @@
+@use './nav_desktop.scss';
+
+.nosotros-container {
+
+    .nosotros-info-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        article {
+            padding: 20px;
+            width: 40%;
+
+            .information {
+                text-align: center;
+            }
+
+            .contact {
+                text-align: center;
+            }
+        }
+    }
+}
