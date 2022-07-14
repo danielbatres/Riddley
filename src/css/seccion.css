@@ -221,7 +221,7 @@ main .opciones {
 main .opciones button {
   width: 100%;
   min-width: 288px;
-  padding: 60px 0;
+  padding: 60px 20px;
   border-radius: 20px;
   border: none;
   font-size: 1.4rem;
